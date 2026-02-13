@@ -1,4 +1,5 @@
 <div align="center">
+  <p>🚩 <b>Jay Shri Ram</b> 🚩</p> 
   <h1>🇮🇳 भारतवर्ष: संस्कृति और गौरव 🇮🇳</h1>
   <p><b>"अतिथी देवो भव:"</b></p>
   <hr>
@@ -23,6 +24,8 @@
 <div align="center">
   <h3>🛡️ कॉपीराइट और सुरक्षा</h3>
   <p>© 2026 <b>souravkushwahaindia</b>. सर्वाधिकार सुरक्षित।</p>
-  <p><b>Universal Logic: 69</b></p>
+  
+  <p><b>INDIA Logic: 108 | 486 | 963 | 512 | 525</b></p>
+  
   <p><i>"सत्यमेव जयते"</i></p>
 </div>
