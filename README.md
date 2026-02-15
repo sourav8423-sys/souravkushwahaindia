@@ -78,10 +78,7 @@
 ---
 
 ## 🚀 तकनीक (Technology Stack)
-
-* **Device:** iPhone 15
-* **Environment:** Pyto / Carnets / Google Cloud
-* **Hosting:** Netlify / Cloudflare
+**जय श्री राम 
 
 ---
 
