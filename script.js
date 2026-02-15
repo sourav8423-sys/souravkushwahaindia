@@ -40,5 +40,25 @@ document.addEventListener('keydown', (event) => {
 if (localStorage.getItem('system_status') === 'OFFLINE') {
     document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:20%;'>[SYSTEM OFFLINE BY CONTROLLER]</h1>";
 }
+/* Side D-GOD : Master Recovery System */
+/* जय श्री राम */
+
+document.addEventListener('keydown', (event) => {
+    // अगर आप कीबोर्ड पर 'Ctrl + R' दबाते हैं (Recovery)
+    if (event.ctrlKey && event.key === 'r') {
+        const recoveryInput = prompt("सिस्टम रिकवरी कोड दर्ज करें:");
+        
+        // यह कोड आपकी गुप्त चाबी का उपयोग करके सिस्टम को दोबारा चालू कर देगा
+        const secretRecoveryKey = "369" + "RECOVER"; 
+
+        if (recoveryInput === secretRecoveryKey) {
+            localStorage.removeItem('system_status');
+            alert("सिस्टम पुनः सक्रिय (Online) कर दिया गया है।");
+            window.location.reload();
+        } else {
+            alert("गलत रिकवरी कोड!");
+        }
+    }
+});
 
 
