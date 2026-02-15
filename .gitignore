@@ -1,0 +1,15 @@
+# Side D-GOD - Privacy Protection
+
+# Python की टेम्परेरी फाइलें (इन्हें पब्लिक न करें)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# सिस्टम और डिवाइस की फाइलें (जैसे आपके iPhone की फाइलें)
+.DS_Store
+Thumbs.db
+
+# आपकी पर्सनल की (Key) और कॉन्फिग फाइल्स
+.env
+auth_key.txt
+local_settings.py
