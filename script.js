@@ -87,3 +87,30 @@ window.onload = () => {
     checkEmergencyReset();
     secureAccess();
 };
+/* Side D-GOD : Daily Success Mantra Logic */
+/* जय श्री राम */
+
+const successMantras = [
+    "ब्रह्मांड की शक्तियाँ (3, 6, 9) उनके साथ हैं जो कर्म में विश्वास रखते हैं।",
+    "अंधकार (Side A) से उजाले (Side B) की ओर बढ़ना ही विजय है।",
+    "महा-नियंत्रक सौरव कुशवाहा: आपकी शक्ति आपके संकल्प में है।",
+    "369 की कुंजी से हर बंद दरवाजा खुल सकता है।",
+    "पिता मदन गोपाल कुशवाहा का आशीर्वाद ही आपकी सबसे बड़ी शक्ति है।"
+];
+
+const displayDailyMantra = () => {
+    // तारीख के हिसाब से मंत्र चुनना
+    const dayOfYear = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+    const selectedMantra = successMantras[dayOfYear % successMantras.length];
+    
+    // इसे डैशबोर्ड पर दिखाना
+    const mantraElement = document.getElementById('daily-mantra');
+    if (mantraElement) {
+        mantraElement.innerText = selectedMantra;
+        mantraElement.style.display = 'block';
+    }
+};
+
+// लॉगिन के बाद इसे चलाएं
+// if (loginSuccess) displayDailyMantra();
+
