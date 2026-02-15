@@ -60,5 +60,30 @@ document.addEventListener('keydown', (event) => {
         }
     }
 });
+/* Side D-GOD : Security Alert System */
+/* जय श्री राम */
+
+// गलत प्रयास की गिनती के लिए
+let failedAttempts = 0;
+
+const triggerSecurityAlert = () => {
+    failedAttempts++;
+    console.warn(`[SECURITY ALERT]: गलत चाबी का प्रयास किया गया। प्रयास संख्या: ${failedAttempts}`);
+    
+    if (failedAttempts >= 3) {
+        alert("चेतावनी: कई बार गलत प्रयास! आपका IP एड्रेस और लोकेशन रिकॉर्ड की जा रही है।");
+        // यहाँ हम सिस्टम को पूरी तरह लॉक कर सकते हैं
+        localStorage.setItem('system_status', 'LOCKED');
+        window.location.reload();
+    }
+};
+
+// आपके पुराने script.js के else भाग में इसे जोड़ें
+/*
+} else {
+    triggerSecurityAlert();
+    alert("गलत चाबी! एक्सेस वर्जित है।");
+}
+*/
 
 
