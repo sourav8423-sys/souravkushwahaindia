@@ -70,8 +70,7 @@
 
 ## 🔒 सुरक्षा और पहचान (Security & Identity)
 
-* **Domain:** [skworld.co.in](http://skworld.co.in)
-* **Security Key:** `26/06/1997` (DoB)
+* **Domain:** [skworld.co.in]
 * **Father's Name:** Madan Gopal Kushvaha
 * **Owner:** Sourav Kushwaha (India)
 
