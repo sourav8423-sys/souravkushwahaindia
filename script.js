@@ -21,3 +21,24 @@ const secureAccess = () => {
 
 // पेज लोड होते ही सुरक्षा सक्रिय करें
 window.onload = secureAccess;
+/* Side D-GOD : Emergency Kill Switch */
+/* जय श्री राम */
+
+document.addEventListener('keydown', (event) => {
+    // अगर आप कीबोर्ड पर 'K' और 'S' (Kill Switch) एक साथ दबाते हैं
+    if (event.ctrlKey && event.key === 'k') {
+        const confirmKill = confirm("क्या आप सिस्टम को तुरंत ऑफलाइन करना चाहते हैं?");
+        if (confirmKill) {
+            document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:20%;'>[SYSTEM OFFLINE BY CONTROLLER]</h1>";
+            localStorage.setItem('system_status', 'OFFLINE');
+            console.log("Emergency Shutdown Initiated.");
+        }
+    }
+});
+
+// चेक करें कि क्या सिस्टम पहले से ऑफलाइन है
+if (localStorage.getItem('system_status') === 'OFFLINE') {
+    document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:20%;'>[SYSTEM OFFLINE BY CONTROLLER]</h1>";
+}
+
+
