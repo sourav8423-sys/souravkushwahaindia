@@ -74,3 +74,22 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+<div id="mantra-container" style="text-align: center; margin-top: 20px; padding: 15px;">
+    <p id="daily-mantra" style="
+        font-family: 'Sanskrit', serif; 
+        font-size: 1.5rem; 
+        font-weight: bold; 
+        color: #ffd700; 
+        text-shadow: 0 0 10px #ffd700, 0 0 20px #ff8c00; 
+        display: none; 
+        animation: glow 2s ease-in-out infinite alternate;">
+        </p>
+</div>
+
+<style>
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ffd700, 0 0 20px #ff8c00; }
+    to { text-shadow: 0 0 20px #fff700, 0 0 40px #ffd700; }
+}
+</style>
