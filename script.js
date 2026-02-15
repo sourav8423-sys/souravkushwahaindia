@@ -106,5 +106,41 @@ const checkEmergencyReset = () => {
 
 // पेज लोड होते ही इसे चेक करें
 window.addEventListener('load', checkEmergencyReset);
+/* Side D-GOD : Ultimate Security & Self-Destruct Logic */
+/* जय श्री राम */
+
+let failedAttempts = localStorage.getItem('failed_attempts') || 0;
+
+const secureAccess = () => {
+    // अगर सिस्टम पहले से लॉक्ड है
+    if (localStorage.getItem('system_status') === 'LOCKED') {
+        document.body.innerHTML = "<h1 style='color:red; text-align:center; margin-top:20%;'>[SYSTEM SELF-DESTRUCTED: ACCESS DENIED]</h1>";
+        return;
+    }
+
+    const inputKey = prompt("कृपया अपनी गुप्त चाबी (Security Key) दर्ज करें:");
+    const masterKey = "26" + "06" + "19" + "97"; // Hidden Key Logic
+
+    if (inputKey === masterKey) {
+        localStorage.setItem('failed_attempts', '0');
+        document.body.style.display = "block"; 
+        console.log("Status: Side D-GOD System Online");
+        if (typeof saveAccessLog === "function") saveAccessLog(); 
+    } else {
+        failedAttempts++;
+        localStorage.setItem('failed_attempts', failedAttempts);
+        
+        if (failedAttempts >= 5) {
+            localStorage.setItem('system_status', 'LOCKED');
+            alert("खतरा! 5 से अधिक गलत प्रयास। सिस्टम स्व-विनाश (Self-Destruct) मोड में है।");
+            window.location.reload();
+        } else {
+            alert(`गलत चाबी! चेतावनी: आपके पास ${5 - failedAttempts} प्रयास शेष हैं।`);
+            window.location.reload();
+        }
+    }
+};
+
+window.onload = secureAccess;
 
 
