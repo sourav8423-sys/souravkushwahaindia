@@ -85,5 +85,26 @@ const triggerSecurityAlert = () => {
     alert("गलत चाबी! एक्सेस वर्जित है।");
 }
 */
+/* Side D-GOD : Emergency Reset System */
+/* जय श्री राम */
+
+// यह फंक्शन एक गुप्त URL पैरामीटर के माध्यम से सिस्टम को अनलॉक करेगा
+const checkEmergencyReset = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // अगर आप अपनी वेबसाइट के लिंक के पीछे '?mode=reset369' जोड़ते हैं
+    if (urlParams.get('mode') === 'reset369') {
+        const masterResetConfirm = confirm("क्या आप मास्टर रिसेट सक्रिय करना चाहते हैं?");
+        if (masterResetConfirm) {
+            localStorage.removeItem('system_status');
+            localStorage.setItem('failed_attempts', '0');
+            alert("सिस्टम रिसेट सफल। अब आप सामान्य रूप से प्रवेश कर सकते हैं।");
+            window.location.href = window.location.pathname; // URL को साफ करने के लिए
+        }
+    }
+};
+
+// पेज लोड होते ही इसे चेक करें
+window.addEventListener('load', checkEmergencyReset);
 
 
